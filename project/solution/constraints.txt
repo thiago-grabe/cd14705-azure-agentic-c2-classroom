@@ -1,0 +1,12 @@
+# Transitive pins that keep semantic-kernel 1.37.0 importable.
+#
+# Why this file exists: the course requirements.txt pins only four packages and
+# lets pip resolve the rest. Today that resolution picks openai>=3, which ships
+# against the `httpx2` package; semantic-kernel 1.37.0 still imports `httpx`,
+# so the install succeeds and then fails at import time with
+# `ModuleNotFoundError: No module named 'httpx'`.
+#
+# requirements.txt is left exactly as the course ships it; install with:
+#   uv pip install -r requirements.txt -c constraints.txt
+openai<3
+httpx>=0.27,<0.29

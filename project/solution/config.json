@@ -1,0 +1,10 @@
+{
+  "_comment": "Optional overrides. Delete this file and final.py still runs on its baked-in defaults. Agent temperatures and chat iteration budgets are read at import time; max_code_retries, approvals and debug are read at run time.",
+  "max_code_retries": 10,
+  "numeric_tolerance": 0.01,
+  "approvals": {
+    "after_analysis": true,
+    "before_report": false
+  },
+  "debug": false
+}

@@ -1,0 +1,76 @@
+Use this format for the report, use data from the analysis to fill in all sections:
+
+
+# Data Analysis Report
+
+**Data Date:** XXXX-XX-XX
+
+---
+
+## Overview
+
+
+
+---
+
+## 1. Data Cleaning
+
+**Approach:**  
+
+
+**Detected Outliers (removed):**
+
+
+**Cleaned Data (n = XX):**
+
+
+**Result:**  
+
+
+---
+
+## 2. Descriptive Statistics
+
+
+
+### Cleaned Data (After Outlier Removal)
+
+
+**Summary:**  
+
+---
+
+## 3. Validation Summary
+
+- **Iteration 1:** 
+- **Iteration 2:** 
+
+---
+
+## 4. Data Visualization
+
+
+![Data Visualization](data_visualization.png)
+
+---
+
+## 5. Conclusions
+
+
+
+---
+
+### Agent Workflow Summary
+
+| Step            | Agent           | Action                    | Status/result              |
+|-----------------|----------------|---------------------------|----------------------------|
+|     |     |   |                     |
+
+
+---
+
+**Data Date:** XXXX-XX-XX
+
+---
+
+*End of Report*
