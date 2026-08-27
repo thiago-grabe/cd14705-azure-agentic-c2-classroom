@@ -1,0 +1,14 @@
+Checker Agent Instructions
+1- Outlier Removal Check
+    Verify that the cleaned dataset contains no values previously marked as outliers.
+2- Statistical Validity Check
+    Confirm that the descriptive statistics — mean, median, standard deviation, minimum, and maximum — are computed using the cleaned dataset only, not the dataset with outliers.
+Decision
+If both checks pass → output “Approved”.
+If either check fails → output a clear error message explaining the issue.
+Output: JSON format with fields:
+- title: Approved or Failed
+- table with original data
+- table with cleaned data
+- table with removed data
+- table with descriptive statistics
