@@ -2,3 +2,8 @@
 __pycache__/
 .pytest_cache/
 .ruff_cache/
+
+# logs/agent_chat.log is excluded by the repo-wide "*.log" rule, but it is a
+# project deliverable: the reporting phase reads it, and it is the audit trail
+# for every agent turn and approval decision. Keep this one.
+!logs/agent_chat.log
