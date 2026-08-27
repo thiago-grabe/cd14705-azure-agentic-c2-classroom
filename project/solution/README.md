@@ -41,9 +41,14 @@ Requires **Python 3.13**.
 
 ```bash
 uv venv --python 3.13
-uv pip install -r requirements.txt -r requirements-dev.txt -c constraints.txt
+uv pip install --prerelease=allow -r requirements.txt -r requirements-dev.txt -c constraints.txt
 ```
 
+> **Why `--prerelease=allow`?** semantic-kernel 1.37 depends on
+> `azure-ai-agents>=1.2.0b3`, a pre-release. `uv` refuses pre-releases unless
+> told otherwise and fails with "your requirements are unsatisfiable"; plain
+> `pip` accepts them because the requirement itself pins one.
+>
 > **Why `-c constraints.txt`?** `requirements.txt` is the course's file, pinning
 > only four packages and letting the resolver pick the rest. Today that resolves
 > `openai>=3`, which ships against `httpx2`; semantic-kernel 1.37 still imports
@@ -51,7 +56,7 @@ uv pip install -r requirements.txt -r requirements-dev.txt -c constraints.txt
 > `ModuleNotFoundError: No module named 'httpx'`. The constraints file pins the
 > two transitive packages and leaves `requirements.txt` untouched.
 
-With plain pip: `pip install -r requirements.txt -r requirements-dev.txt -c constraints.txt`.
+With plain pip (no flag needed): `pip install -r requirements.txt -r requirements-dev.txt -c constraints.txt`.
 
 ## Run
 

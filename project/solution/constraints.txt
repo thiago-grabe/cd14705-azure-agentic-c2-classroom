@@ -7,6 +7,10 @@
 # `ModuleNotFoundError: No module named 'httpx'`.
 #
 # requirements.txt is left exactly as the course ships it; install with:
-#   uv pip install -r requirements.txt -c constraints.txt
+#   uv  pip install --prerelease=allow -r requirements.txt -c constraints.txt
+#   pip install -r requirements.txt -c constraints.txt
+#
+# uv needs --prerelease=allow because semantic-kernel 1.37 depends on
+# azure-ai-agents>=1.2.0b3; pip accepts that pre-release without a flag.
 openai<3
 httpx>=0.27,<0.29

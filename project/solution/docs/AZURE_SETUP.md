@@ -282,6 +282,7 @@ rather than a full analysis phase.
 | `Please provide an endpoint or a base_url` | `URL` is empty or absent from `.env` | Semantic Kernel's own error. Check `.env` is next to `final.py` |
 | `base_url and azure_endpoint are mutually exclusive` | Both were passed to the connector | `final.py` never does this; check for local edits |
 | `ModuleNotFoundError: No module named 'httpx'` | `openai>=3` resolved in, which uses `httpx2` | Install with `-c constraints.txt` (see the README) |
+| `your requirements are unsatisfiable` (uv) | semantic-kernel depends on the pre-release `azure-ai-agents>=1.2.0b3` | Add `--prerelease=allow` to the `uv pip install` command |
 | Sign-in loops or rejects the TAP | The TAP is single-use and time-limited | Use your account password instead |
 
 ---
